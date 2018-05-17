@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+source /root/openrc
+
+openstack network create --share --provider-physical-network provider --provider-network-type flat ext-net
+
+openstack --insecure subnet create --network ext-net --allocation-pool start=192.168.122.50,end=192.168.122.254 --subnet-range 192.168.122.0/24 --dns-nameserver 8.8.4.4 --gateway 192.168.122.1 --no-dhcp ext-subnet 
+
+openstack network set --external ext-net
+
+openstack floating ip create ext-net
+
+# TODO: Create remaining Openstack objects and run the ONAP heat templates after populating onap_openstack.env
+
