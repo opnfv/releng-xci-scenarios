@@ -1,0 +1,36 @@
+#!/bin/bash
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+source /root/openrc
+
+openstack network create --share --provider-physical-network provider --provider-network-type flat ext-net
+export EXTERNAL_NETWORK="$(openstack network list  | grep ext-net |  awk '{print $2}')"
+
+openstack --insecure subnet create --network ext-net --allocation-pool start=192.168.122.50,end=192.168.122.254 --subnet-range 192.168.122.0/24 --dns-nameserver 8.8.4.4 --gateway 192.168.122.1 --no-dhcp ext-subnet
+
+openstack network set --external ext-net
+
+openstack floating ip create ext-net
+
+openstack image create --public --disk-format qcow2 --container-format bare --file ${XCI_CACHE}/images/ubuntu-16.04-server-cloudimg-amd64-disk1.img ubuntu-16.04
+
+openstack image create --public --disk-format qcow2 --container-format bare --file ${XCI_CACHE}/images/ubuntu-14.04-server-cloudimg-amd64-disk1.img ubuntu-14.04
+
+openstack flavor create m1.small auto 2048 20 1 --is-public True
+
+openstack flavor create m1.medium auto 4096 40 2 --is-public True
+
+openstack flavor create m1.large auto 8192 80 4 --is-public True
+
+openstack flavor create m1.xlarge auto 16384 160 8 --is-public True
+
+openstack flavor create m1.xxlarge auto 32768 3200 16 --is-public True
+
+export PUBLIC_KEY="$(cat /root/.ssh/id_rsa.pub)"
+
+export TENANT_ID="$(openstack project list  | grep admin |  awk '{print $2}')"
+
+# TODO: Create remaining Openstack objects and run the ONAP heat templates after populating onap_openstack.env

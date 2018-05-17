@@ -1,0 +1,36 @@
+---
+# SPDX-license-identifier: Apache-2.0
+##############################################################################
+# Copyright (c) 2018 Ericsson AB and others.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Apache License, Version 2.0
+# which accompanies this distribution, and is available at
+# http://www.apache.org/licenses/LICENSE-2.0
+##############################################################################
+
+- name: Clone the ONAP demo repository 
+  git:
+    repo: https://gerrit.onap.org/r/demo
+    dest: "{{ xci_cache }}/repos/onap-install"
+    version: master
+- name: Download Ubuntu 16.04 image
+  get_url:
+    url: https://cloud-images.ubuntu.com/releases/16.04/release/ubuntu-16.04-server-cloudimg-amd64-disk1.img
+    dest: "{{ xci_cache }}/images"
+    mode: 0744
+- name: Download Ubuntu 14.04 image
+  get_url:
+    url: https://cloud-images.ubuntu.com/releases/14.04/release/ubuntu-14.04-server-cloudimg-amd64-disk1.img
+    dest: "{{ xci_cache }}/images"
+    mode: 0744
+- name: Execute OpenStack Configuration script
+  command: "/bin/bash openstack_configure"
+- name: prepare environment file for ONAP installation
+  template:
+    src: onap_openstack.env.j2
+    dest: "{{ xci_cache }}/repos/onap-install/heat/ONAP/onap_openstack.env"
+    mode: 0755
+- name: Run the ONAP Installation HEAT Template
+  shell: |
+    source /root/openrc
+    openstack stack create -t {{ xci_cache }}/repos/onap-install/heat/ONAP/onap_openstack.yaml -e {{ xci_cache }}/repos/onap-install/heat/ONAP/onap_openstack.env admin
