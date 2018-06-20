@@ -1,0 +1,13 @@
+---
+osm_required_packages:
+  apt:
+    - apt-transport-https
+    - ca-certificates
+    - software-properties-common
+    - docker.io
+    - snapd
+    - lxd
+
+osm_devops_git_url: "https://osm.etsi.org/gerrit/osm/devops.git"
+osm_devops_clone_location: "{{ ansible_env.HOME }}/osm-devops"
+osm_devops_version: "v4.0.1"

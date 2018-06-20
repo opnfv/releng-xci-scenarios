@@ -1,0 +1,13 @@
+- name: clone OSM devops repo
+  become_user: devuser
+  git:
+    repo: "{{ osm_devops_git_url }}"
+    dest: "{{ osm_devops_clone_location }}"
+    version: "{{ osm_devops_version }}"
+
+- name: execute OSM installation script
+  become_user: devuser
+  shell: ./install_osm.sh -y --nolxd
+  args:
+    chdir: "{{ osm_devops_clone_location }}/installers"
+  ignore_errors: False

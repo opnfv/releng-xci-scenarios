@@ -1,0 +1,2 @@
+- include: configure-opnfvhost.yml
+- include: install-osm.yml
