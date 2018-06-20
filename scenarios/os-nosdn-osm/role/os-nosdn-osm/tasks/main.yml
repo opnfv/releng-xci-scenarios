@@ -1,0 +1,2 @@
+- include: { configure-opnfvhost.yml, become: yes }
+- include: { install-osm.yml, become: no }
