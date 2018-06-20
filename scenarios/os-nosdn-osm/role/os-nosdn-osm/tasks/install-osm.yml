@@ -1,0 +1,11 @@
+- name: clone OSM devops repo
+  git:
+    repo: "{{ osm_devops_git_url }}"
+    dest: "{{ osm_devops_clone_location }}"
+    version: "{{ osm_devops_version }}"
+
+- name: execute OSM installation script
+  shell: install_osm.sh -y --nolxd --nodocker
+  args:
+    chdir: "{{ osm_devops_clone_location }}/installers"
+  ignore_errors: False
