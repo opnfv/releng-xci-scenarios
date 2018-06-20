@@ -1,0 +1,14 @@
+---
+osm_required_packages:
+  apt:
+    - apt-transport-https
+    - ca-certificates
+    - software-properties-common
+    - docker.io
+    - snapd
+    - lxd
+
+osm_install_user: "devuser"
+osm_devops_git_url: "https://osm.etsi.org/gerrit/osm/devops.git"
+osm_devops_clone_location: "/home/{{ osm_install_user }}/osm-devops"
+osm_devops_version: "v4.0.1"
