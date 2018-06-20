@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# OSM needs to be installed after OpenStack is installed
+export POST_DEPLOYMENT=true
