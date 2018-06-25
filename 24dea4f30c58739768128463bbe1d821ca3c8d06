@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da5c1566_5f9fa85f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2091
+      },
+      "writtenOn": "2018-06-25T08:07:57Z",
+      "side": 1,
+      "message": "we are adding a new step in the xci deployment, right? 1st --\u003e bifrost stuff, 2nd --\u003e VIM deployment, 3rd --\u003e MANO deployment. The switch to decide if the third step is executed is through the SCENARIO_POST_DEPLOY variable. I wonder if it is better that the variable has MANO in its name and that it\u0027s value depends on the scenario string. For example, \u003c% if \"\u0027osm\u0027 in DEPLOY_SCENARIO\u0027 %\u003e True \u003c% else %\u003e False \u003c% endif %\u003e",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 62
+      },
+      "revId": "24dea4f30c58739768128463bbe1d821ca3c8d06",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_5f76883f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2091
+      },
+      "writtenOn": "2018-06-25T08:07:57Z",
+      "side": 1,
+      "message": "Why using os-nosdn-osm scenario for the sfc scenario? The idea is to deploy os-odl-sfc and then, if osm is part of the scenario name, then we deploy osm instead of tacker. Just in case it crosses your mind, unfortunately, tacker is a MANO inside openstack, so I think it still makes sense to deploy it through OSA and not doing its installation the same way as with OSM or ONAP",
+      "range": {
+        "startLine": 24,
+        "startChar": 21,
+        "endLine": 25,
+        "endChar": 8
+      },
+      "revId": "24dea4f30c58739768128463bbe1d821ca3c8d06",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_7fa6ecc2",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/configure-opnfvhost.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2091
+      },
+      "writtenOn": "2018-06-25T08:07:57Z",
+      "side": 1,
+      "message": "2018",
+      "range": {
+        "startLine": 3,
+        "startChar": 16,
+        "endLine": 3,
+        "endChar": 20
+      },
+      "revId": "24dea4f30c58739768128463bbe1d821ca3c8d06",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
