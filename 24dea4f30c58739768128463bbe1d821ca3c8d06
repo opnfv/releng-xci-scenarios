@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "da5c1566_ffd79cbd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 254
+      },
+      "writtenOn": "2018-06-25T10:29:41Z",
+      "side": 1,
+      "message": "i think it is better to have a more generic way to handle scenarios that require post-deployment stuff, not limited to mano only. apart from that, what I propose here leaves control to scenario developer with no conditionals; set SCENARIO_POST_DEPLOY variable, overriding the default one if you want to do things post-deploy.",
+      "parentUuid": "da5c1566_5f9fa85f",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 62
+      },
+      "revId": "24dea4f30c58739768128463bbe1d821ca3c8d06",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da5c1566_5f76883f",
         "filename": "/COMMIT_MSG",
         "patchSetId": 13
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "da5c1566_3fe2b49f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 254
+      },
+      "writtenOn": "2018-06-25T10:29:41Z",
+      "side": 1,
+      "message": "instead of looking at the scenario name to determine what to do, i rather think of doing what scenario is supposed to do. (this is important if you think sdf as well which will tell what to install for a certain scenario.)\n\nApart from that, I think my wording wasn\u0027t right there. What I meant was to look into possibility of (re)using the role that configures opnfv host for OSM and installs OSM for os-odl-osm_sfc so you don\u0027t need to develop OSM stuff from scratch.\n\nif you need to skip tacker pieces, that\u0027s fine and needs to be reflected properly. Perhaps you leave os-odl-sfc untouched until you implement os-odl-osm_sfc with OSM (and ONAP in future) and kill os-odl-sfc over time.",
+      "parentUuid": "da5c1566_5f76883f",
+      "range": {
+        "startLine": 24,
+        "startChar": 21,
+        "endLine": 25,
+        "endChar": 8
+      },
+      "revId": "24dea4f30c58739768128463bbe1d821ca3c8d06",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da5c1566_7fa6ecc2",
         "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/configure-opnfvhost.yml",
         "patchSetId": 13
@@ -59,6 +107,30 @@
       "writtenOn": "2018-06-25T08:07:57Z",
       "side": 1,
       "message": "2018",
+      "range": {
+        "startLine": 3,
+        "startChar": 16,
+        "endLine": 3,
+        "endChar": 20
+      },
+      "revId": "24dea4f30c58739768128463bbe1d821ca3c8d06",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da5c1566_9fee608a",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/configure-opnfvhost.yml",
+        "patchSetId": 13
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 254
+      },
+      "writtenOn": "2018-06-25T10:29:41Z",
+      "side": 1,
+      "message": "will fix, thx.",
+      "parentUuid": "da5c1566_7fa6ecc2",
       "range": {
         "startLine": 3,
         "startChar": 16,
