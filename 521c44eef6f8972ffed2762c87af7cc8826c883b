@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a561d44_e1dd4344",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/configure-opnfvhost.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 5473
+      },
+      "writtenOn": "2018-08-08T08:26:49Z",
+      "side": 1,
+      "message": "why is this a block instead of 3 distinctive tasks?",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 18
+      },
+      "revId": "521c44eef6f8972ffed2762c87af7cc8826c883b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_c1e2bf02",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/configure-opnfvhost.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 5473
+      },
+      "writtenOn": "2018-08-08T08:26:49Z",
+      "side": 1,
+      "message": "again, why is this a block?",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 25
+      },
+      "revId": "521c44eef6f8972ffed2762c87af7cc8826c883b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
