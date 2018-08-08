@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a561d44_81bf27d0",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/configure-opnfvhost.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 254
+      },
+      "writtenOn": "2018-08-08T08:31:20Z",
+      "side": 1,
+      "message": "there was a when here when I first started integrating OSM but it seems I\u0027ve forgotten to remove block after I got rid of that when clause. will fix.",
+      "parentUuid": "9a561d44_e1dd4344",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 18
+      },
+      "revId": "521c44eef6f8972ffed2762c87af7cc8826c883b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a561d44_c1e2bf02",
         "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/configure-opnfvhost.yml",
         "patchSetId": 19
@@ -36,6 +60,30 @@
       "writtenOn": "2018-08-08T08:26:49Z",
       "side": 1,
       "message": "again, why is this a block?",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 25
+      },
+      "revId": "521c44eef6f8972ffed2762c87af7cc8826c883b",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a561d44_e1b423f4",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/configure-opnfvhost.yml",
+        "patchSetId": 19
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 254
+      },
+      "writtenOn": "2018-08-08T08:31:20Z",
+      "side": 1,
+      "message": "same here.",
+      "parentUuid": "9a561d44_c1e2bf02",
       "range": {
         "startLine": 53,
         "startChar": 0,
