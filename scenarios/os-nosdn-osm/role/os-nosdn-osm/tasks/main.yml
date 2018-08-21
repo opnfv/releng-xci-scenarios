@@ -1,3 +1,4 @@
+---
 # SPDX-license-identifier: Apache-2.0
 ##############################################################################
 # Copyright (c) 2018 Ericsson AB and others.
@@ -7,7 +8,11 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
 
-# All the tasks for os-nosdn-osm scenario are executed post-deployment
-# so we do not run anything here
-- debug:
-    msg: "No pre-deployment task found for the scenario {{ deploy_scenario }}. Skipping."
+- name: copy user_variables_os-nosdn-osm.yml
+  copy:
+    src: "user_variables_os-nosdn-osm.yml"
+    dest: "{{openstack_osa_etc_path}}/user_variables_os-nosdn-osm.yml"
+- name: copy os-nosdn-osm scenario specific openstack_user_config.yml
+  copy:
+    src: "{{xci_flavor}}/openstack_user_config.yml"
+    dest: "{{openstack_osa_etc_path}}/openstack_user_config.yml"
