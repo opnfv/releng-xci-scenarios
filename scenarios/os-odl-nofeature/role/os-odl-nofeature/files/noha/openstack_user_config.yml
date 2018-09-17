@@ -145,6 +145,11 @@ network_hosts:
   controller00:
     ip: 172.29.236.11
 
+# ceilometer
+metering-infra_hosts:
+  controller00:
+    ip: 172.29.236.11
+
 # nova hypervisors
 compute_hosts:
   compute00:
