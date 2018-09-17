@@ -38,6 +38,9 @@ neutron_ml2_drivers_type: "flat,vlan,vxlan"
 
 neutron_plugin_base:
   - odl-router_v2
+
+# To get functest testcases work (otherwise it keeps trying to access the metadata server)
+neutron_dnsmasq_force_metadata: True
 {% endraw %}
 
 {% if odl_repo_version is defined %}
