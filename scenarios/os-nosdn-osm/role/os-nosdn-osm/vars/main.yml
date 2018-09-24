@@ -21,5 +21,4 @@ osm_required_packages:
 # specifying exact version for OSM itself.
 osm_devops_version: "v4.0.1"
 osm_devops_git_url: "https://osm.etsi.org/gerrit/osm/devops.git"
-osm_devops_clone_location: "/home/{{ osm_install_user }}/osm-devops"
 osm_install_user: "devuser"
