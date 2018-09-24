@@ -22,6 +22,30 @@
       "revId": "8f28725680b15548fdf5adac75bc9e7de6d924ad",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_562f97a1",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/install-osm.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 7313
+      },
+      "writtenOn": "2018-09-24T11:24:22Z",
+      "side": 1,
+      "message": "Yes, fixed it.",
+      "parentUuid": "5a682502_96312f0e",
+      "range": {
+        "startLine": 21,
+        "startChar": 45,
+        "endLine": 21,
+        "endChar": 71
+      },
+      "revId": "8f28725680b15548fdf5adac75bc9e7de6d924ad",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
