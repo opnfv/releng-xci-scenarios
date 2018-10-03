@@ -22,3 +22,10 @@
   args:
     chdir: "{{ osm_devops_clone_location }}/installers"
     creates: "/usr/bin/osm"
+
+- name: create osmrc file
+  copy:
+    dest: "{{ osmrc_file_dest }}"
+    content: |
+      export OSM_HOSTNAME=127.0.0.1
+      export OSM_OL005=True
