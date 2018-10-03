@@ -20,3 +20,10 @@ lxd_ipv6_mask: ""
 lxd_ipv6_network: ""
 lxd_ipv6_nat: "false"
 lxd_ipv6_proxy: "false"
+
+## Create osmrc file
+osmrc_file_dest: "{{ ansible_env.HOME }}/osmrc"
+osmrc_file_owner: "{{ ansible_user_id }}"
+osmrc_file_group: "{{ ansible_user_id }}"
+osmrc_file_mode: "0600"
+
