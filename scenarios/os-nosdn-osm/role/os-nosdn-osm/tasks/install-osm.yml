@@ -22,3 +22,8 @@
   args:
     chdir: "{{ osm_devops_clone_location }}/installers"
     creates: "/usr/bin/osm"
+
+- name: Create osmrc file
+  copy:
+    src: osmrc
+    dest: "{{ osmrc_file_dest }}"
