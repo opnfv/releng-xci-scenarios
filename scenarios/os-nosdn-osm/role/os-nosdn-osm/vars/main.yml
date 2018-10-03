@@ -23,3 +23,9 @@ osm_devops_version: "v4.0.1"
 osm_devops_git_url: "https://osm.etsi.org/gerrit/osm/devops.git"
 osm_devops_clone_location: "/home/{{ osm_install_user }}/osm-devops"
 osm_install_user: "devuser"
+
+## Create osmrc file
+osmrc_file_dest: "{{ ansible_env.HOME }}/osmrc"
+osmrc_file_owner: "{{ ansible_user_id }}"
+osmrc_file_group: "{{ ansible_user_id }}"
+osmrc_file_mode: "0600"
