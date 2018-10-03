@@ -7,6 +7,20 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
 
-- include: configure-opnfvhost.yml
-- include: install-osm.yml
-- include: register-vim.yml
+- name: Create osmrc file
+  template:
+    src: osmrc.j2
+    dest: "{{ osmrc_file_dest }}"
+    owner: "{{ osmrc_file_owner }}"
+    group: "{{ osmrc_file_group }}"
+    mode: "{{ osmrc_file_mode }}"
+
+- name: Register OpenStack as VIM
+  shell: osm vim-create
+    --name openstack-site
+    --user admin
+    --password "{{ openrc_os_password }}"
+    --tenant admin
+    --account_type openstack
+    --auth_url "{{ openrc_os_auth_url }}"
+    --config='{insecure: true}'
