@@ -1,0 +1,26 @@
+# SPDX-license-identifier: Apache-2.0
+##############################################################################
+# Copyright (c) 2018 Venkata Harshavardhan Reddy Allu.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Apache License, Version 2.0
+# which accompanies this distribution, and is available at
+# http://www.apache.org/licenses/LICENSE-2.0
+##############################################################################
+
+- name: Create osmrc file
+  template:
+    src: osmrc.j2
+    dest: "{{ osmrc_file_dest }}"
+    owner: "{{ osmrc_file_owner }}"
+    group: "{{ osmrc_file_group }}"
+    mode: "{{ osmrc_file_mode }}"
+
+- name: Register OpenStack as VIM
+  shell: "osm vim-create \
+    --name openstack-site \
+    --user admin \
+    --password {{ openrc_os_password }} \
+    --tenant admin \
+    --account_type openstack \
+    --auth_url {{ openrc_os_auth_url }} \
+    --config='{insecure: true}'"
