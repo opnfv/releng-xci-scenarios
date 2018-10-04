@@ -22,6 +22,30 @@
       "revId": "311fe787da22a30c53c5b45b3233672a7409acc1",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_c5b641dc",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/defaults/main.yml",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 7313
+      },
+      "writtenOn": "2018-10-04T09:26:55Z",
+      "side": 1,
+      "message": "Since we\u0027re not changing the user at the task \u0027Create osmrc file\u0027. So that would be /root.",
+      "parentUuid": "5a682502_25a0d58f",
+      "range": {
+        "startLine": 25,
+        "startChar": 21,
+        "endLine": 25,
+        "endChar": 37
+      },
+      "revId": "311fe787da22a30c53c5b45b3233672a7409acc1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
