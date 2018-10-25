@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_cc0daf92",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/register-vim.yml",
+        "patchSetId": 17
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 5473
+      },
+      "writtenOn": "2018-10-25T15:43:02Z",
+      "side": 1,
+      "message": "You did not understand what I meant. You already have this information in the \u0027osmrc\u0027 file (and in the Ansible variables). Can\u0027t you use and of these instead of hardoding this here? sourcing the file in the shell module might also be good enough.",
+      "range": {
+        "startLine": 30,
+        "startChar": 4,
+        "endLine": 30,
+        "endChar": 27
+      },
+      "revId": "5227748bf14d18746cef16fbdb752a93b03c3d9d",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
