@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a682502_ac02f36c",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/install-osm.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 7313
+      },
+      "writtenOn": "2018-10-25T15:27:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a682502_8cb737d8",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 33
+      },
+      "revId": "df47139cf55f36846c2f769f9f3e4e43304c2294",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a682502_6cba9bc1",
         "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/register-vim.yml",
         "patchSetId": 16
@@ -36,6 +60,30 @@
       "writtenOn": "2018-10-25T14:05:17Z",
       "side": 1,
       "message": "Not sure about this \u0027pause\u0027 module here. Would the \u0027wait_for\u0027 module be a better option?",
+      "range": {
+        "startLine": 17,
+        "startChar": 1,
+        "endLine": 18,
+        "endChar": 14
+      },
+      "revId": "df47139cf55f36846c2f769f9f3e4e43304c2294",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_cc364f52",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/register-vim.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 7313
+      },
+      "writtenOn": "2018-10-25T15:27:20Z",
+      "side": 1,
+      "message": "Using \u0027wait_for\u0027 module. But they both accomplish the same task when used without any condition.",
+      "parentUuid": "5a682502_6cba9bc1",
       "range": {
         "startLine": 17,
         "startChar": 1,
@@ -82,6 +130,48 @@
         "endLine": 31,
         "endChar": 20
       },
+      "revId": "df47139cf55f36846c2f769f9f3e4e43304c2294",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_4cf35f9e",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/register-vim.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 7313
+      },
+      "writtenOn": "2018-10-25T15:27:20Z",
+      "side": 1,
+      "message": "To use in the lab after deployment when working with OSM.",
+      "parentUuid": "5a682502_ecc50b3e",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "df47139cf55f36846c2f769f9f3e4e43304c2294",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_ecf34b9d",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/register-vim.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 7313
+      },
+      "writtenOn": "2018-10-25T15:27:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a682502_ccb12fe3",
       "revId": "df47139cf55f36846c2f769f9f3e4e43304c2294",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
