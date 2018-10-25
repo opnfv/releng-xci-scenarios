@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_8cb737d8",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/install-osm.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 5473
+      },
+      "writtenOn": "2018-10-25T14:05:17Z",
+      "side": 1,
+      "message": "This is a very small file. You could potentially use the\n\u0027content\u0027 attribute of the \u0027copy\u0027 module\n\nhttps://docs.ansible.com/ansible/latest/modules/copy_module.html\n\nto create the contents on the fly.",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 33
+      },
+      "revId": "df47139cf55f36846c2f769f9f3e4e43304c2294",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_6cba9bc1",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/register-vim.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 5473
+      },
+      "writtenOn": "2018-10-25T14:05:17Z",
+      "side": 1,
+      "message": "Not sure about this \u0027pause\u0027 module here. Would the \u0027wait_for\u0027 module be a better option?",
+      "range": {
+        "startLine": 17,
+        "startChar": 1,
+        "endLine": 18,
+        "endChar": 14
+      },
+      "revId": "df47139cf55f36846c2f769f9f3e4e43304c2294",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_ccb12fe3",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/register-vim.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 5473
+      },
+      "writtenOn": "2018-10-25T14:05:17Z",
+      "side": 1,
+      "message": "you are likely missing the changed_when: False option here",
+      "revId": "df47139cf55f36846c2f769f9f3e4e43304c2294",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_ecc50b3e",
+        "filename": "scenarios/os-nosdn-osm/role/os-nosdn-osm/tasks/register-vim.yml",
+        "patchSetId": 16
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 5473
+      },
+      "writtenOn": "2018-10-25T14:05:17Z",
+      "side": 1,
+      "message": "isn\u0027t this part of the osmrc file you created before? If you are passing the env vars here directly then why did you create the file in the first place?",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "df47139cf55f36846c2f769f9f3e4e43304c2294",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
