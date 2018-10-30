@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_3f8f22ce",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5473
+      },
+      "writtenOn": "2018-10-30T10:24:36Z",
+      "side": 1,
+      "message": "Good git practices suggest to use the \u0027commit title\u0027 to provide a short summary of the commit.\n\nSo a good example here would be to say\n\n\u0027OSM: use full_install_osm.sh script to install from master\u0027\n\nNot a big problem of course, I thought to take this as an opportunity to mention that to you.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 33
+      },
+      "revId": "b2559205359a1984372b99ab3aebe7e147049752",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
