@@ -1,0 +1,7 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+2: Markos Chandras <mchandras@suse.de>
+Submitted-by: Manuel Buil <mbuil@suse.com>
+Submitted-at: Tue, 06 Nov 2018 14:57:23 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/64477
+Project: releng-xci-scenarios
+Branch: refs/heads/master
