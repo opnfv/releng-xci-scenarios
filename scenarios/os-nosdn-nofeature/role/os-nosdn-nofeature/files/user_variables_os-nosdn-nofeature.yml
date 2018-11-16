@@ -36,3 +36,6 @@ neutron_provider_networks:
   network_mappings: "flat:br-ex"
   network_interface: eth12
 
+haproxy_ssl: false
+openstack_external_ssl: false
+openstack_service_publicuri_proto: http
