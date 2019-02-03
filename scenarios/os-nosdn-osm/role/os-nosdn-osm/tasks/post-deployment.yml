@@ -8,6 +8,8 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
 
-- include: configure-opnfvhost.yml
-- include: install-osm.yml
-- include: register-vim.yml
+- name: Install OSM
+  include: install-osm.yml
+
+- name: Register OpenStack as VIM
+  include: register-vim.yml
