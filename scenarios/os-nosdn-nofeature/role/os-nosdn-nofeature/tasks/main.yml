@@ -1,6 +1,7 @@
 ---
 # SPDX-license-identifier: Apache-2.0
 ##############################################################################
+# Copyright (c) 2019 SUSE Linux GmbH
 # Copyright (c) 2017 Ericsson AB and others.
 # All rights reserved. This program and the accompanying materials
 # are made available under the terms of the Apache License, Version 2.0
@@ -8,11 +9,20 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
 
-- name: copy user_variables_os-nosdn-nofeature.yml
-  copy:
-    src: "user_variables_os-nosdn-nofeature.yml"
-    dest: "{{openstack_osa_etc_path}}/user_variables_os-nosdn-nofeature.yml"
-- name: copy os-nosdn-nofeature scenario specific openstack_user_config.yml
-  copy:
-    src: "{{xci_flavor}}/openstack_user_config.yml"
-    dest: "{{openstack_osa_etc_path}}/openstack_user_config.yml"
+- block:
+  - name: copy user_variables_os-nosdn-nofeature.yml for osa
+    copy:
+      src: "user_variables_os-nosdn-nofeature.yml"
+      dest: "{{openstack_osa_etc_path}}/user_variables_os-nosdn-nofeature.yml"
+  - name: copy os-nosdn-nofeature scenario specific openstack_user_config.yml
+    copy:
+      src: "{{xci_flavor}}/openstack_user_config.yml"
+      dest: "{{openstack_osa_etc_path}}/openstack_user_config.yml"
+  when: installer_type == "osa"
+
+- block:
+  - name: copy k8s-cluster.yml for osh
+    copy:
+      src: "k8s-cluster.yml"
+      dest: "{{ remote_xci_path }}/.cache/repos/kubespray/opnfv_inventory/group_vars/k8s-cluster.yml"
+  when: installer_type == "osh"
