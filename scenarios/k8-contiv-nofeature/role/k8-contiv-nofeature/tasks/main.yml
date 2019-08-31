@@ -1,4 +1,6 @@
+---
 ##############################################################################
+# Copyright (c) 2019 Ericsson Software Technology and others.
 # Copyright (c) 2018 HUAWEI TECHNOLOGIES CO.,LTD and others.
 #
 # All rights reserved. This program and the accompanying materials
@@ -6,9 +8,12 @@
 # which accompanies this distribution, and is available at
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
----
 
-- name: copy k8s-cluster.yml
-  copy:
-    src: "k8s-cluster.yml"
-    dest: "{{ remote_xci_path }}/.cache/repos/kubespray/opnfv_inventory/group_vars/k8s-cluster.yml"
+# set networking plugin to contiv
+- name: Set network plugin to contiv
+  lineinfile:
+    path: "{{ remote_xci_path }}/.cache/repos/kubespray/inventory/opnfv/group_vars/k8s-cluster/k8s-cluster.yml"
+    regexp: "^kube_network_plugin:.*"
+    line: "kube_network_plugin: contiv"
+
+# vim: set ts=2 sw=2 expandtab:
