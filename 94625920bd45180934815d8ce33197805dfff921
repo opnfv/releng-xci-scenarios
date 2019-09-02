@@ -1,0 +1,7 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+2: Manuel Buil <mbuil@suse.com>
+Submitted-by: Fatih Degirmenci <fdegir@gmail.com>
+Submitted-at: Mon, 02 Sep 2019 11:39:57 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/c/releng-xci-scenarios/+/68418
+Project: releng-xci-scenarios
+Branch: refs/heads/master
