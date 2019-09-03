@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# osh scripts contain show-all flag which has been deprecated in v1.15
+# we override kubernetes version to ensure osh scripts continue working
+export KUBERNETES_VERSION=${KUBERNETES_VERSION:-v1.14.6}
